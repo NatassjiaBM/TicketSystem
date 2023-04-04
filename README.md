@@ -3,8 +3,25 @@
 The Ticket system is an Assessment I did for my Software Project. In this Assessment, we were supposed to to a 
 project where you could generate Tickets for a HELP DESK program. In order to do that, I connected the code to a data base, where I could storage the data and use it to generate statistics later on. When you download this code, please be sure to download the Access DataBase as well in order to it to function. 
 
-## Connecting to the database 
-The first and the most important part (at least I think it is the most important lol) is connecting to the data base, to to that you have to download the extension. Just go to your cmd, type pip pyodbc and you will be good to go. 
+## Connecting to the database
+
+The first and the most important part (at least I think it is the most important lol) is connecting to the data base, to to that you have to download the extension. Just go to your cmd, type `pip install pyodbc` and you will be good to go. 
+
+### macOS
+
+If you're using **Apple Silicon** architecture, you might find that the `pyodbc` extension, at its latest compilation, won't work. This is given to the fact its binary is not compatible with your processor. If that's the case, you can install and re-compile the extension using the following command:
+
+```sh
+pip install --no-binary :all: pyodbc
+```
+
+If, by any reason, the extension was already installed, you can force it to re-install using the `--force-reinstall` flag:
+
+```sh
+pip install --force-reinstall --no-binary :all: pyodbc
+```
+
+## Features
 
 ### Login   
 The login function will define which access you'll have. 
